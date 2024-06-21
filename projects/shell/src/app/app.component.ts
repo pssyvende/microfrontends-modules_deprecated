@@ -1,25 +1,25 @@
-import { getManifest } from '@angular-architects/module-federation';
+//import { getManifest } from '@angular-architects/module-federation';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { CustomManifest } from './utils/config';
-import { buildRoutes } from './utils/routes';
+//import { Router } from '@angular/router';
+//import { CustomManifest } from './utils/config';
+//import { buildRoutes } from './utils/routes';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent /*implements OnInit*/ {
   title = 'shell';
 
-  constructor(
-    private router: Router
-  ) {}
+  // constructor(
+  //   private router: Router
+  // ) {}
 
-  ngOnInit(): void {
-    const manifest = getManifest<CustomManifest>();
+  // ngOnInit(): void {
+  //   const manifest = getManifest<CustomManifest>();
 
-    const routes = buildRoutes(manifest);
-    this.router.resetConfig(routes);
-  }
+  //   const routes = buildRoutes(manifest);
+  //   this.router.resetConfig(routes);
+  // }
 }
